@@ -1,0 +1,16 @@
+.geo-option {
+  cursor: pointer;
+  padding: 0 4px;
+  > .fa-check {
+    display: none;
+  }
+  &.selected {
+    color: purple;
+    > .fa-check {
+      display: inline;
+    }
+  }
+  &:hover {
+    background-color: darkgray;
+  }
+}

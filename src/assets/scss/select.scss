@@ -1,0 +1,53 @@
+.my-select {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  position: relative;
+  width: 200px;
+  display: inline-block;
+  z-index: 99;
+
+  .box {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 2px 4px;
+    > .fa-angle-down {
+      transition: transform 0.5s;
+    }
+    &:hover {
+      border-color: gray;
+    }
+    &.focus {
+      border-color: blue;
+      > .fa-angle-down {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 4px 0;
+    margin-top: 4px;
+    box-shadow: 4px 4px 4px darkgray;
+    max-height: 400px;
+    overflow: auto;
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      border-width: 4px;
+      margin-left: -4px;
+      margin-top: -8px;
+      border-style: solid;
+      border-color: transparent transparent whitesmoke transparent;
+    }
+  }
+}
